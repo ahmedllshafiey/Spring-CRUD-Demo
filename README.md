@@ -98,10 +98,6 @@ mvn test
 2. Update the necessary details.
 3. Submit the form to save the changes.
 
-### Deleting a Staff Member
-
-1. On the staff details page, click on the delete button next to the staff member you want to remove.
-
 ## Validations
 
 - Staff name cannot be blank.
