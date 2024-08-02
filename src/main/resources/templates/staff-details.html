@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href=".favicon.svg" type="image/x-icon">
+    <link th:href="@{/styles.css}" rel="stylesheet">
+    <title>Staff Details</title>
+</head>
+<body>
+<div class="container">
+    <h1>Staff Details</h1>
+    <p>This is the details page for staff.</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${staffList}">
+            <td th:text="${item.staffName}"></td>
+            <td th:text="${item.staffPosition}"></td>
+            <td th:text="${item.staffSalary}"></td>
+            <td> <a role="button" th:href="@{/(id=${item.id})}">Update</a> </td>
+        </tr>
+        </tbody>
+    </table>
+    <a class="button" th:href="@{/}">Add New Staff Member</a>
+</div>
+</body>
+</html>
